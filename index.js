@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 const cheerio = require('cheerio');
-
+const fetch = require('node-fetch');
 io.on('connection', (socket) => {
     console.log('a user connected');
 });
