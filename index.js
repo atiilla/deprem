@@ -66,9 +66,7 @@ setInterval(() => {
 }, 1000);
 
 app.get('/', (req, res) => {
-    GetEarthquakeData().then((data) => {
-        console.log(data);
-    });
+   
     res.sendFile(__dirname + '/index.html');
 });
 
