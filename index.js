@@ -22,7 +22,7 @@ const GetEarthquakeData = async () => {
     let result = [];
     rows.each((index, row) => {
         // get first 3 rows only
-        if (index < 5) {
+        if (index < 7) {
             let cols = $(row).find('td');
             let data = {
                 date: $(cols[0]).text(),
