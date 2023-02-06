@@ -5,10 +5,13 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 const cheerio = require('cheerio');
+const cors = require('cors');
 const fetch = require('node-fetch');
 io.on('connection', (socket) => {
     console.log('a user connected');
 });
+
+app.use(cors());
 
 const GetEarthquakeData = async () => {
     let data = await fetch('https://deprem.afad.gov.tr/last-earthquakes.html');
